@@ -1,0 +1,73 @@
+mission "Homula: Blended Ships uninstalled"
+	landing
+	invisible
+	non-blocking
+	repeat
+	to offer
+		not "installed plugin: Blended Ships"
+  		has "event: homula: blended ships installed"
+	on offer
+		event "homula: blended ships uninstalled"
+		clear "event: homula: blended ships installed"
+		fail
+
+event "homula: blended ships uninstalled"
+	fleet "Large Southern Merchants"
+		remove variant
+			"Hauler IV"
+			"Rawalpindi"
+		remove variant
+			"Eagle"
+			"Hauler IV"
+	fleet "Large Core Merchants"
+		remove variant
+			"Caterpillar"
+			"Hauler IV"
+	fleet "Large Free Worlds"
+		remove variant
+			"Eagle"
+			"Eyrie"
+
+
+mission "Homula: Blended Ships installed with Hauler IV"
+	landing
+	invisible
+	non-blocking
+	repeat
+	to offer
+		has "installed plugin: Blended Ships"
+  		has "event: southern carriers 2"
+	on offer
+		event "homula: blended ships installed with hauler iv"
+		fail
+
+event "homula: blended ships installed with hauler iv"
+	fleet "Large Southern Merchants"
+		add variant
+			"Hauler IV"
+			"Rawalpindi"
+		add variant
+			"Eagle"
+			"Hauler IV"
+	fleet "Large Core Merchants"
+		add variant
+			"Caterpillar"
+			"Hauler IV"
+
+mission "Homula: Blended Ships installed with Eyrie"
+	landing
+	invisible
+	non-blocking
+	repeat
+	to offer
+		has "installed plugin: Blended Ships"
+  		has "event: navy using mark ii ships"
+	on offer
+		event "homula: blended ships installed with eyrie"
+		fail
+
+event "homula: blended ships installed with eyrie"
+	fleet "Large Free Worlds"
+		add variant
+			"Eagle"
+			"Eyrie"

@@ -1,0 +1,6 @@
+name "Homula"
+about "This plugin adds the Hauler IV, an extension of the Hauler series, and the Eyrie, extension of the Hauler (Type F) series. Sprites are not very well done; this plugin is more of a proof of concept and isn't very well done. Cross-plugin compatibility with Blended Ships by mOctave exists."
+authors
+	Loymdayddaud
+dependencies
+	"game version" 0.10.11-alpha
