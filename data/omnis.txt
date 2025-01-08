@@ -1,0 +1,3 @@
+shipyard "human plugin"
+	"Eyrie"
+	"Hauler IV"
